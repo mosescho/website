@@ -11,10 +11,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.get('/portfolio', (req, res) => {
-  console.log('moses\'s portfolio')
-  res.send('mose\'s portfolio');
-})
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}/../public/dist/index.html`));
 });
