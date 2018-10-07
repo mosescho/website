@@ -42,12 +42,15 @@
 //   left: 50,
 //   behavior: 'smooth'
 // })
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 function navigateTo(id) {
   // selector
   // document.querySelector('#about-container')
   // document.getElementsByClassName('')
-  const element = document.getElementById(id);
+  var element = document.getElementById(id);
   console.log('element', element);
   element.scrollIntoView({
     behavior: 'smooth'
